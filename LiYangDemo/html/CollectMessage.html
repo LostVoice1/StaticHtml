@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>个人信息</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <style type="text/css"> body{ background: url("../image/bg.jpg") no-repeat center center fixed; /*兼容浏览器版本*/
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover; } </style>
+<style type="text/css"> input{ opacity:.2; filter:alpha(opacity=20); border-style:inset; } </style>
+<style type="text/css"> select{ opacity:.2; filter:alpha(opacity=20); border-style:inset; } </style>
+<style type="text/css">textarea{ opacity:.2; filter:alpha(opacity=20); border-style:inset; } </style>
+</head>
+<body >
+<form>
+    <table border="1px" align="center" width="60%" height="70%">
+        <caption><h1>个人信息</h1></caption>
+        <tr>
+            <th>姓名</th>
+            <th>
+                <input type="text"  value="李炀" />
+            </th>
+            <th>出生日期</th>
+            <th>
+                <input type="date" value="2000-04-26"/>
+            </th>
+        </tr>
+
+      <tr>
+            <th>性别</th>
+            <th colspan="4">
+                <input type="radio" name="xingbie"  checked/>男
+                <input type="radio" name="xingbie"  />女
+            </th>
+
+        </tr>
+
+        <tr>
+            <th>爱好</th>
+            <th colspan="4">
+                <input type="checkbox" name="1"  />音乐
+                <input type="checkbox" name="1"  checked/>骑行
+                <input type="checkbox" name="1"  />上网
+                <input type="checkbox" name="1"  checked/>露营
+                <input type="checkbox" name="1"  />游泳
+                <input type="checkbox" name="1"  />睡觉
+            </th>
+        </tr>
+
+ <tr>
+            <th>学历</th>
+            <th >
+                <select>
+                    <option  value="高中" >高中</option>
+                    <option value="专科">专科</option>
+                    <option value="本科" selected>本科</option>
+                    <option value="研究生">研究生</option>
+                    <option value="博士">博士</option>
+                </select>
+            </th>
+            <th>职业</th>
+            <th >
+                <select>
+                    <option  value="学生" selected>学生</option>
+                    <option value="工人">工人</option>
+                    <option value="教师">教师</option>
+                    <option value="司机">司机</option>
+                    <option value="马云">马云</option>
+                </select>
+            </th>
+        </tr>
+
+        <tr>
+            <th>地址</th>
+            <th colspan="4">
+                <fieldset>
+                    <form action="#">
+                        <label for="addr-show">您选择的是：
+                            <input type="text" value="" id="addr-show">
+                        </label>
+                        <br/>
+
+
+                        <select id="prov" onchange="showCity(this)" >
+                            <option>=请选择省份=</option>
+
+                        </select>
+
+                        <select id="city" onchange="showCountry(this)">
+                            <option>=请选择城市=</option>
+                        </select>
+
+                        <!--县区选择-->
+                        <select id="country" onchange="selecCountry(this)">
+                            <option>=请选择县区=</option>
+                        </select>
+                        <button type="button" class="btn met1" onClick="showAddr()" id="button-show" >确定</button>
+                    </form>
+                </fieldset>
+
+            </th>
+        </tr>
+
+        <tr>
+            <th>浏览感受</th>
+            <th colspan="3">
+                <textarea name="名字" rows="6" cols="90" >
+                    借鉴文案：https://blog.csdn.net/qq_26416195/article/details/81114607?utm_source=app&app_version=4.16.0&code=app_1562916241&uLinkId=usr1mkqgl919blen
+                </textarea>
+            </th>
+        </tr>
+
+        <tr>
+            <th colspan="2">
+                <input type="reset" />
+            </th>
+
+            <th colspan="2">
+                <input type="submit" onclick='window.open("../html/home.html")' />
+            </th>
+
+        </tr>
+    </table>
+</form>
+<script src="../js/city.js"></script>
+<script src="../js/method.js"></script>
+</body>
+</html>
